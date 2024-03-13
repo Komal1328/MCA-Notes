@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find LCM</title>
+	<script type="text/javascript">
+		function lcm(num1,num2)
+		{
+			if(num1%num2==0)
+				alert("LCM is "+num1);
+			else if(num2%num1)
+				alert("LCM is "+num2);
+			else
+			{
+				let i=1;
+				while(!(i%num1==0 && i%num2==0))
+				{
+					i++;
+				}
+				alert("LCM is "+i);
+			}
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var num1=parseInt(prompt("Enter First number"));
+		var num2=parseInt(prompt("Enter Second number"));
+		lcm(num1,num2);
+	</script>
+</body>
+</html>

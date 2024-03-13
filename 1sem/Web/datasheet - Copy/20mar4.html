@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lagest Number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function large()
+		{
+			var num1,num2,num3;
+			num1=parseInt(document.getElementById("no1").value);
+		 	num2=parseInt(document.getElementById("no2").value);
+		 	num3=parseInt(document.getElementById("no3").value);
+		 	if(num1>num2 && num1>num3)
+		 		alert("Largest number is num1 "+num1);
+		 	else if(num2>num3)
+		 		alert("Largest number is num2 "+num2);
+		 	else
+		 		alert("Largest number is num3 "+num3);
+		}
+	</script>
+	<form>
+		Number1:<input type="text" name="no1" id="no1"><br>
+		Number2:<input type="text" name="no2" id="no2"><br>
+		Number3:<input type="text" name="no2" id="no3"><br>
+		<input type="button" name="button" value="Largest" onclick="large()">
+	</form>
+</body>
+</html>

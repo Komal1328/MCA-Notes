@@ -1,0 +1,35 @@
+import './App.css';
+import React from 'react';
+class App extends React.Component{
+  render(){
+    const User=[
+      {id:'1MS22MC070',
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9876543210'
+    },
+    {id:'1MS22MC071',
+    name:'Sita',
+    email:'sita@gmail.com',
+    phno:'9876543219'
+    }
+    ];
+    return(
+      <div>
+        <ol>
+          {User.map(data =>(
+            <li key={data.id}>{data.id}
+            <ul>
+              <li>{data.name}</li>
+              <li>{data.email}</li>
+              <li>{data.phno}</li>
+            </ul>
+            </li>
+          ))}
+        </ol>
+      </div>
+    );
+  }
+}
+
+export default App;

@@ -1,0 +1,327 @@
+package com.tutlane.checkboxexample;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    CheckBox android, java, angular, python;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        android = (CheckBox)findViewById(R.id.chkAndroid);
+        angular = (CheckBox)findViewById(R.id.chkAngular);
+        java = (CheckBox)findViewById(R.id.chkJava);
+        python = (CheckBox)findViewById(R.id.chkPython);
+        Button btn = (Button)findViewById(R.id.getBtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String result = "Selected Courses";
+                if(android.isChecked()){
+                result += "\nAndroid";
+                }
+                if(angular.isChecked()){
+                    result += "\nAngularJS";
+                }
+                if(java.isChecked()){
+                    result += "\nJava";
+                }
+                if(python.isChecked()){
+                    result += "\nPython";
+                }
+                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    public void onCheckboxClicked(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
+        String str="";
+        // Check which checkbox was clicked
+        switch(view.getId()) {
+            case R.id.chkAndroid:
+                str = checked?"Android Selected":"Android Deselected";
+                break;
+            case R.id.chkAngular:
+                str = checked?"AngularJS Selected":"AngularJS Deselected";
+                break;
+            case R.id.chkJava:
+                str = checked?"Java Selected":"Java Deselected";
+                break;
+            case R.id.chkPython:
+                str = checked?"Python Selected":"Python Deselected";
+                break;
+        }
+        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+    }
+}
+
+
+
+button:
+
+public class MainActivity extends AppCompatActivity {  
+    private EditText edittext1, edittext2;  
+    private Button buttonSum;  
+  
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_main);  
+  
+        addListenerOnButton();  
+    }  
+  
+    public void addListenerOnButton() {  
+        edittext1 = (EditText) findViewById(R.id.editText1);  
+        edittext2 = (EditText) findViewById(R.id.editText2);  
+        buttonSum = (Button) findViewById(R.id.button);  
+  
+        buttonSum.setOnClickListener(new View.OnClickListener() {  
+            @Override  
+            public void onClick(View view) {  
+                String value1=edittext1.getText().toString();  
+                String value2=edittext2.getText().toString();  
+                int a=Integer.parseInt(value1);  
+                int b=Integer.parseInt(value2);  
+                int sum=a+b;  
+                Toast.makeText(getApplicationContext(),String.valueOf(sum), Toast.LENGTH_LONG).show();  
+            }  
+        });  
+    }  
+}  
+
+
+
+
+toggle:
+
+public class MainActivity extends AppCompatActivity {  
+    private ToggleButton toggleButton1, toggleButton2;  
+    private Button buttonSubmit;  
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_main);  
+  
+        addListenerOnButtonClick();  
+    }  
+  
+    public void addListenerOnButtonClick(){  
+        //Getting the ToggleButton and Button instance from the layout xml file  
+        toggleButton1=(ToggleButton)findViewById(R.id.toggleButton);  
+        toggleButton2=(ToggleButton)findViewById(R.id.toggleButton2);  
+        buttonSubmit=(Button)findViewById(R.id.button);  
+  
+        //Performing action on button click  
+        buttonSubmit.setOnClickListener(new View.OnClickListener(){  
+  
+            @Override  
+            public void onClick(View view) {  
+                StringBuilder result = new StringBuilder();  
+                result.append("ToggleButton1 : ").append(toggleButton1.getText());  
+                result.append("\nToggleButton2 : ").append(toggleButton2.getText());  
+                //Displaying the message in toast  
+                Toast.makeText(getApplicationContext(), result.toString(),Toast.LENGTH_LONG).show();  
+            }  
+  
+        });  
+  
+    }  
+}  
+
+
+
+expli intent:
+
+package com.example.intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.content.Intent;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+    Button b;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        b = (Button) findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, MainActivity4.class);
+                startActivity(i);
+            }
+        });
+    }
+}
+
+
+package com.example.intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.content.Intent;
+import android.view.View;
+
+public class MainActivity4 extends AppCompatActivity {
+    Button b2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main3);
+
+        b2 = (Button) findViewById(R.id.button3);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity4.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
+
+
+
+impli intent:
+
+package com.example.impliintant;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.net.Uri;
+import android.view.View;
+import android.content.Intent;
+
+public class MainActivity extends AppCompatActivity {
+    EditText e;
+    Button b;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        e = findViewById(R.id.editTextText);
+        b = findViewById(R.id.button);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = e.getText().toString();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+
+            }
+        });
+    }
+}
+
+
+sum:
+
+package com.example.sum;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText edittext1, edittext2;
+    private Button buttonSum;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        addListenerOnButton();
+    }
+
+    public void addListenerOnButton() {
+        edittext1 = (EditText) findViewById(R.id.editText1);
+        edittext2 = (EditText) findViewById(R.id.editText2);
+        buttonSum = (Button) findViewById(R.id.button);
+
+        buttonSum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String value1=edittext1.getText().toString();
+                String value2=edittext2.getText().toString();
+                int a=Integer.parseInt(value1);
+                int b=Integer.parseInt(value2);
+                int sum=a+b;
+                Toast.makeText(getApplicationContext(),String.valueOf(sum), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+}
+
+
+
+activity:
+
+package com.example.activity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.util.Log;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d("lifecycle", "onCreate invoked");
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("lifecycle", "onStart invoked");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("lifecycle", "onResume invoked");
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("lifecycle","onPause invoked");
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("lifecycle","onStop invoked");
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("lifecycle","onRestart invoked");
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("lifecycle","onDestroy invoked");
+    }
+
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration_Form</title>
+	<h2>Registration Form</h2>
+</head>
+<body>
+	<form>
+		<label>User Name:</label><input type="fname" name="fname" id="fnm" placeholder="Enter firstname" required><br><br>
+
+		<label>Last Name:</label><input type="lname" name="lname" id="lnm" placeholder="Enter lastname"required><br><br>
+
+		<label>Gender</label><br>
+			<input type="radio" name="r1" required>Mail<br>
+			<input type="radio" name="r2" required>Female<br>
+			<input type="radio" name="r3" required>others<br><br>
+
+		<label>Address:</label><textarea name="address" rows="5" cols="20" required></textarea><br><br>
+
+		<label>Email:</label><input type="email" name="email" id="em" placeholder="pleace enter vaild email address" 
+		pattern="^[A-Za-z0-9+_.-]+@[A-Za-z0-9+_.-]+$" required><br><br>
+
+		<label>Password</label><input type="password" name="pwd" pattern=".{8,}" title="eight or more char" 
+		pattern="^(?=[0-9])(/=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^(){}[]:;<>,./?~`+_=-).{8,32)$" required><br><br>
+
+		<label>Phone:</label><input type="phone" name="pho" id="pno" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder="000-111-1234 format" required><br><br>
+
+		<label>Semester:</label><input type="semester" name="sem" id="sem" pattern="^[1-8]{1}$" placeholder="Enter semester number" required><br><br>
+
+		<label>Branch:</label><br>
+			<input type="checkbox" name="c1">MCA<br>
+			<input type="checkbox" name="c2">MBA<br>
+			<input type="checkbox" name="c3">M-tech<br>
+		
+		<input type="Submit" name="submit" value="submit">
+		<input type="Reset" name="Reset">
+	</form>
+</body>
+</html>

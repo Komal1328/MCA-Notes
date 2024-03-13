@@ -1,0 +1,57 @@
+CREATE TABLE Book16(
+book_id NUMBER NOT NULL,
+Title varchar(20),
+Publisher_name varchar(20),
+PRIMARY KEY(book_id)
+);
+
+CREATE TABLE Book_authors16(
+book_id NUMBER NOT NULL,
+Author_name varchar(20),
+PRIMARY KEY(Author_name,book_id)
+);
+
+CREATE TABLE Publisher16(
+Name varchar(20) NOT NULL,
+Address varchar(100),
+Phone NUMBER,
+PRIMARY KEY(Name)
+);
+
+CREATE TABLE Book_copies16(
+Book_id NUMBER,
+Branch_id NUMBER,
+no_of_copies NUMBER,
+FOREIGN KEY(Book_id) REFERENCES Book16(Book_id)
+);
+
+CREATE TABLE Book_loans16(
+Book_id NUMBER,
+Branch_id NUMBER,
+card_no NUMBER,
+Date_out DATE,
+Due_date DATE,
+FOREIGN KEY(Book_id) REFERENCES Book16(Book_id)
+);
+
+CREATE TABLE Library_Branch16(
+Branch_id NUMBER,
+Branch_name varchar(20),
+Address varchar(100),
+PRIMARY KEY(Branch_id)
+);
+
+CREATE TABLE Borrower16(
+Card_no NUMBER,
+Name varchar(20),
+Address varchar(100),
+Phone NUMBER,
+PRIMARY KEY(Card_no)
+);
+
+ALTER TABLE Book16 ADD FOREIGN KEY(Publisher_name) REFERENCES Publisher16(Name);
+
+ALTER TABLE Book_copies16 ADD FOREIGN KEY(Branch_id) REFERENCES Library_branch16(Branch_id);
+
+ALTER TABLE Book_loans16 ADD FOREIGN KEY(card_no) REFERENCES Borrower16(card_no);
+ALTER TABLE Book_loans16 ADD FOREIGN KEY(Branch_id) REFERENCES Library_branch16(Branch_id);

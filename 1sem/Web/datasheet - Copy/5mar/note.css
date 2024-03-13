@@ -1,0 +1,18 @@
+	note
+	{
+		color: black;
+		background-color: white;
+		width: 100%;
+	}
+
+	heading
+	{
+		color: black;
+		font-size: 40px;
+	}
+	to,from,heading,body
+	{
+		display: block;
+		font-weight: bold;
+	}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function deg()
+		{
+			var temp;
+			temp=parseFloat(temp);
+			temp=prompt("Enter the temprature in degree celsius");
+			res=(temp-32)*0.5556;
+			alert(res);
+		}
+		function fah()
+		{
+			var temp;
+			temp=parseFloat(temp);
+			temp=prompt("Enter the temprature in Fahrenheit");
+			res=(temp*1.8)+32;
+			alert(res);
+		}
+	</script>
+	<input type="button" name="button" value="Degree to Fahrenheit" onclick="deg()"><br><br>
+	<input type="button" name="button" value="Fahrenheit to Degree" onclick="fah()"><br>	
+</body>
+</html>

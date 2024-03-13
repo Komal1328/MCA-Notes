@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function getText() 
+		{
+			var content=document.getElementById("Typecontent").value;
+			if (content >= 100) 
+				res="Greater or equal to 100";
+			else
+				res="less then 100";
+			document.getElementById("name").innerHTML=res;
+		}
+	</script>
+	<input type="text" id="Typecontent" /><br><br>
+	<input type="button" onclick="getText()" value="Validate"/>
+	<p>Result:<b id="name">-----</b></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Get element By Id</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function cuben()
+		{
+			var n=parseInt(document.getElementById("n1").value);
+			res=n**3;
+			alert("Cube of number "+n+" is "+res);
+		}
+	</script>
+	<form>
+		Number:<input type="text" id="n1"><br><br>
+		<button onclick="cuben()">Cube</button>
+	</form>
+</body>
+</html>

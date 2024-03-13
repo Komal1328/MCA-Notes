@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="note.css"?>
+<note>
+	<heading>Note</heading>
+	<to>To:Raj</to>
+	<from>From:Ravi</from>
+	<heading>Reminder</heading>
+	<body>Meeting at 8am</body>
+</note>

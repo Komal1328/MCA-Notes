@@ -1,0 +1,111 @@
+*******************************************************Food********************************************************
+
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Suger', '100', '2023-06-12', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Salt', '40', '2023-06-13', '5');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'oil', '120', '2023-06-13', '5');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Tea powder', '70', '2023-06-15', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Milk', '25', '2023-06-15', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Curd', '15', '2023-06-17', '5');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Milk', '25', '2023-06-20', '4');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Boost', '70', '2023-06-19', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Bread', '45', '2023-06-18', '3');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Egg', '50', '2023-06-18', '5');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Meggi', '45', '2023-06-20', '4');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Milk', '70', '2023-06-21', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Rice', '100', '2023-06-21', '6');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Fruits', '300', '2023-06-23', '5');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Vegetables', '60', '2023-06-23', '4');
+INSERT INTO `food` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Curd', '15', '2023-06-15', '6');
+
+*************************************************Homeaccessary***********************************************************
+
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Bulb', '500', '2023-06-12', '4');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Table', '500', '2023-06-15', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Room freshners', '100', '2023-06-15', '4');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Broom', '70', '2023-06-15', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Mop', '100', '2023-06-17', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Chair', '250', '2023-06-18', '6');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Bed, '500', '2023-06-20', '6');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Mug', '100', '2023-06-20', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Plates', '400', '2023-06-21', '6');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Boxes', '300', '2023-06-21', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Curtain', '350', '2023-06-22', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Bottles', '500', '2023-06-22', '4');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Water can', '100', '2023-06-23', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'IronBox', '500', '2023-06-24', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Spoon', '500', '2023-06-29', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Hanger', '500', '2023-06-30', '4');
+
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Shoe rack', '300', '2023-06-21', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Clock', '350', '2023-06-22', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Fan', '700', '2023-06-22', '4');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Book', '100', '2023-06-23', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Bucket', '150', '2023-06-24', '3');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Pen stand', '80', '2023-06-29', '5');
+INSERT INTO `homeaccessary` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Table', '500', '2023-06-30', '4');
+
+***********************************************Others****************************************************************
+
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Pen', '50', '2023-06-02', '4');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Clips', '100', '2023-06-02', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Powder', '70', '2023-06-04', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Bag', '300', '2023-06-07', '6');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Peast', '100', '2023-06-09', '4');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Bresh', '70', '2023-06-10', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Napkins', '80', '2023-06-15', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Tablets', '250', '2023-06-18', '6');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Umbrella', '300', '2023-06-19', '6');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Charger', '100', '2023-06-20', '4');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Shoe', '70', '2023-06-20', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Book', '80', '2023-06-21', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Bag', '250', '2023-06-21', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Pen', '60', '2023-06-22', '6');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Speaker', '100', '2023-06-23', '4');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Water Jug', '70', '2023-06-24', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Glass', '80', '2023-06-24', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Cups', '250', '2023-06-25', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Tissu paper', '60', '2023-06-25', '6');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Hit', '150', '2023-06-20', '4');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Comb', '70', '2023-06-20', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Dust pan', '80', '2023-06-21', '3');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Towel', '300', '2023-06-21', '5');
+INSERT INTO `others` (`ID`, `Item`, `Amount`, `Date`, `User_id`) VALUES ('', 'Tissu paper', '60', '2023-06-22', '6');
+
+**********************************************Bills******************************************************************
+INSERT INTO `bills` (`ID`, `Type`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Wifi', '1500', '2023-06-17', '5');
+INSERT INTO `bills` (`ID`, `Type`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'Laundry', '500', '2023-06-18', '4');
+INSERT INTO `bills` (`ID`, `Type`, `Amount`, `Date`, `User_id`) VALUES (NULL, 'laundry', '350', '2023-06-20', '3');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Rent' AS ExpenseType
+FROM rent WHERE User_id = 3
+UNION ALL
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Home Accessory' AS ExpenseType
+FROM homeaccessary WHERE User_id = 3
+UNION ALL
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Food' AS ExpenseType
+FROM food WHERE User_id = 3
+UNION ALL
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Bills' AS ExpenseType
+FROM bills WHERE User_id = 3
+UNION ALL
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Others' AS ExpenseType
+FROM others WHERE User_id = 3
+
+
+SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Rent' AS ExpenseType FROM rent WHERE User_id = ? UNION ALL SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Home Accessory' AS ExpenseType FROM homeaccessary WHERE User_id = ? UNION ALL SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Food' AS ExpenseType FROM food WHERE User_id = ? UNION ALL SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Bills' AS ExpenseType FROM bills WHERE User_id = ? UNION ALL SELECT COALESCE(SUM(Amount), 0) AS Amount, 'Others' AS ExpenseType FROM others WHERE User_id = ?
+
+

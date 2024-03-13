@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To-do list app</title>
+	<link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+	<div class="container">
+		<div class="todo">
+			<h2>To-Do List <img src="images/icon.png"></h2>
+		<div class="row">
+			<input type="text" id="input-box" placeholder="Add to do">
+			<input type="date" id="edate" min="2023-06-20" max="2044-12-31">
+			<button onclick="addtask()">Add</button><br><br>
+		</div>
+		<div class="head">
+			<label><strong><font color="white">----</font>Task<font color="white">---------------------------</font>Due Date</strong></label>
+			<!--<label><strong></strong></label>-->
+		</div>
+		<div>
+			<ul id="list">
+				<!--<li class="checked">Task 1</li>
+				<li>Task 2</li>
+				<li>Task 3</li>-->
+			</ul>
+		</div>
+	</div>
+	<script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function add(n1,n2) 
+		{
+			n1=parseInt(document.getElementById('n1').value);
+			n2=parseInt(document.getElementById('n2').value);
+			res=n1+n2;
+			alert("Addition of "+n1+" and "+n2+" is "+res);
+		}
+		function sub(n1,n2) 
+		{
+			n1=parseInt(document.getElementById('n1').value);
+			n2=parseInt(document.getElementById('n2').value);
+			res=n1-n2;
+			alert("Sub of "+n1+" and "+n2+" is "+res);
+		}
+		function mul(n1,n2) 
+		{
+			n1=parseInt(document.getElementById('n1').value);
+			n2=parseInt(document.getElementById('n2').value);
+			res=n1*n2;
+			alert("Mul of "+n1+" and "+n2+" is "+res);
+		}
+		function div(n1,n2) 
+		{
+			n1=parseInt(document.getElementById('n1').value);
+			n2=parseInt(document.getElementById('n2').value);
+			res=n1/n2;
+			alert("Division of "+n1+" by "+n2+" is "+res);
+		}
+	</script>
+	Num1:<input type="text" name="num1" id="n1"><br>
+	Num2:<input type="text" name="num2" id="n2"><br>
+	<input type="button" name="add" onclick="add()" value="add">
+	<input type="button" name="sub" onclick="sub()" value="sub">
+	<input type="button" name="mul" onclick="mul()" value="mul">
+	<input type="button" name="div" onclick="div()" value="div">
+
+</body>
+</html>

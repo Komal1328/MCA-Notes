@@ -1,0 +1,25 @@
+import React from 'react';
+import './App.css';
+export default function Uncontrolled(){
+function handleSubmit(){
+  alert(`Login sucessfull`);
+}
+function onReset(){
+  window.location.reload(false);
+}
+  return(
+    <div className='app' style={{textAlign:"center"}}>
+      <h1>Login Page</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Name:
+          <input type='text' name="name" />
+        </label><br/>
+        <label>Password:
+          <input type='password'/>
+        </label><br/>
+        <button type='submit' value="submit">SignIn</button>
+        <button type='reset' value="Reset" onClick={onReset}>Reset</button>
+      </form>       
+    </div>
+  );
+}

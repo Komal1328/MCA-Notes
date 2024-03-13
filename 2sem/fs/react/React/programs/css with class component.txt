@@ -1,0 +1,20 @@
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+  
+class App extends React.Component {  
+  render() {  
+    const mystyle = {  
+      color: "Blue",  
+      backgroundColor: "lightGreen",  
+      padding: "10px",  
+      fontFamily: "Arial"  
+    };  
+    return (  
+      <div>  
+      <h1 style={mystyle}>Welcome to MCA Department</h1>  
+      <p>We are into React JS learnings.</p>  
+      </div>  
+    );  
+  }  
+}  
+export default App;  

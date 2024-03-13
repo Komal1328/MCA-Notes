@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script type="text/javascript">
+      function gcd(a, b) {
+        while (b) {
+          var t = a % b;
+          a = b;
+          b = t;
+        }
+        return a;
+      }
+      function lcm(a, b) {
+        return (a * b) / gcd(a, b);
+      }
+      var a = prompt("Enter the first number");
+      var b = prompt("Enter the second number");
+      var lcm = lcm(a, b);
+      var gcd = gcd(a, b);
+      alert("The lcm is " + lcm + " and gcd is "+gcd);
+    </script>
+  </head>
+  <body></body>
+</html>

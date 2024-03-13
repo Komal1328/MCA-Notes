@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Salary</title>
+	<script type="text/javascript">
+		function com(sal)
+		{
+			if(sal>=1000 && sal<=5000)
+			{
+				comm=(sal*10)/100;
+				document.write("Commission: "+comm);
+			}
+			else if(sal>=5001 && sal<=10000)
+			{
+				comm=(sal*15)/100;
+				document.write("Commission: "+comm);
+			}
+			else if(sal>10001)
+			{
+				comm=(sal*20)/100;
+				document.write("Commission: "+comm);
+			}
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var sal=parseInt(prompt("Enter the salary"));
+		com(sal);
+	</script>
+</body>
+</html>

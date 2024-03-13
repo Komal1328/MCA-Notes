@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arithmetic operations</title>
+</head>
+<body>
+<form>
+	<script type="text/javascript">
+		
+		function add() 
+		{
+			var num1=parseInt(document.getElementById("no1").value);
+			var num2=parseInt(document.getElementById("no2").value);
+			alert(num1+num2);
+		}
+		function sub() 
+		{
+			var num1=parseInt(document.getElementById("no1").value);
+			var num2=parseInt(document.getElementById("no2").value);
+			alert(num1-num2);
+		}
+		function mul() 
+		{
+			var num1=parseInt(document.getElementById("no1").value);
+			var num2=parseInt(document.getElementById("no2").value);
+			alert(num1*num2);
+		}
+		function div() 
+		{
+			var num1=parseInt(document.getElementById("no1").value);
+			var num2=parseInt(document.getElementById("no2").value);
+			alert(num1/num2);
+		}
+		function mod() 
+		{
+			var num1=parseInt(document.getElementById("no1").value);
+			var num2=parseInt(document.getElementById("no2").value);
+			alert(num1%num2);
+		}
+	</script>
+	<form>
+		Number 1:<input type="text" name="no1" id="no1"><br><br>
+		Number 2:<input type="text" name="no2" id="no2"><br><br>
+		<input type="button" name="button" onclick="add()" value="ADD"/>
+		<input type="button" name="button" onclick="sub()" value="SUB"/>
+		<input type="button" name="button" onclick="mul()" value="MUL"/>
+		<input type="button" name="button" onclick="div()" value="DIV"/>
+		<input type="button" name="button" onclick="mod()" value="MOD"/>
+	</form>
+</body>
+</html>

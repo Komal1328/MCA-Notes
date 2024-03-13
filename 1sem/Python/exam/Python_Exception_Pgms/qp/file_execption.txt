@@ -1,0 +1,100 @@
+#file1
+file=input("enter a file name")
+lst=[]
+with open(file,"r") as f:
+    content=f.read()
+    line=content.split('\n')
+    
+    for i in line:
+        if("#" in i):
+            lst.append(i)
+for i in lst:
+    print(i)
+
+#exe3
+class NetworkError(RuntimeError):
+    def __init__(self,arg):
+        self.arg=arg
+try:
+    raise NetworkError("Bad hostname")
+except (NetworkError,e):
+    print(e.arg)
+
+#exe4
+file=input("enter a file name")
+with o
+pen(file,"r") as f:
+    content=f.read()
+    cl=len(content.split("\n"))
+    cw=len(content.split())
+    cc=len(content)
+
+print(cl)
+print(cw)
+print(cc)
+
+#exe5
+
+file=input("enter a file name")
+str1=input("enter a sub string")
+lst=[]
+with open(file,"r") as f:
+    content=f.read()
+    line=content.split('\n')
+    
+    for i in line:
+        if(str1 in i):
+            lst.append(i)
+for i in lst:
+    print(i)
+
+#exe6.1
+def sub(a):
+    if(a>2):
+        a= a/(a-3)
+    return a
+
+try:
+    print(sub(5))
+except ZeroDivisionError:
+    print("Can't divide by zero")
+
+
+
+#exe6.2
+try:
+    file=input("Enter a file name")
+    with open(file,"r") as f:
+        print(len(f.read()))
+    #f=open("text","r")
+
+except IOError:
+    print(file," file does not exists")
+
+
+#exe6.3
+a=[1,2,3]
+try:
+    print(a[2])
+    print(a[3])
+except IndexError:
+    print("Out of index")
+
+
+#file10
+file=input("enter a file name")
+lst=[]
+with open(file,"r") as f:
+    c=f.readlines()
+    print("1st 5 lines")
+    for i in (c[:5]):
+        print(i)
+        
+    print("last 5 lines")
+    for line in (c[-5:]):
+        print(line)
+
+
+
+
+

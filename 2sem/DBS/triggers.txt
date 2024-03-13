@@ -1,0 +1,150 @@
+***************************************************Student****************************************************************
+**
+
+CREATE TRIGGER `add_student_to_total` AFTER INSERT ON `student` FOR EACH ROW INSERT INTO total (ID, Name, Amount)
+    VALUES (NEW.ID, NEW.Name, 0);
+
+
+**********************************************************Bills****************************************************************
+Insert
+
+CREATE TRIGGER `insert_bills` AFTER INSERT ON `bills` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+Delete
+
+CREATE TRIGGER `delete_bills` AFTER DELETE ON `bills` 
+FOR EACH ROW UPDATE total SET Amount=((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = Old.User_id) )WHERE total.ID =Old.User_id;
+
+Update
+
+CREATE TRIGGER `update_bills` AFTER UPDATE ON `bills` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+**********************************************************Food****************************************************************
+
+Insert
+
+CREATE TRIGGER `insert_food` AFTER INSERT ON `food` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+Delet
+
+CREATE TRIGGER `delete_food` AFTER DELETE ON `food` 
+FOR EACH ROW UPDATE total SET Amount=((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = Old.User_id) )WHERE total.ID =Old.User_id;
+
+Update
+
+CREATE TRIGGER `update_food` AFTER UPDATE ON `food` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+
+**********************************************************homeaccessary****************************************************************
+
+INSERT
+
+CREATE TRIGGER `insert_homeaccessary` AFTER INSERT ON `homeaccessary` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+DELETE
+
+CREATE TRIGGER `delete_homeaccessary` AFTER DELETE ON `homeaccessary` 
+FOR EACH ROW UPDATE total SET Amount=((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = Old.User_id) )WHERE total.ID =Old.User_id;
+
+UPDATE
+
+CREATE TRIGGER `update_homeaccessary` AFTER UPDATE ON `homeaccessary` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+**********************************************************others****************************************************************
+
+INSERT
+
+CREATE TRIGGER `insert_others` AFTER INSERT ON `others` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+DELETE
+
+CREATE TRIGGER `delete_others` AFTER DELETE ON `others` 
+FOR EACH ROW UPDATE total SET Amount=((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = Old.User_id) )WHERE total.ID =Old.User_id;
+
+UPDATE
+
+CREATE TRIGGER `update_others` AFTER UPDATE ON `others` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+**********************************************************Rent****************************************************************
+Insert
+
+CREATE TRIGGER `insert_rent` AFTER INSERT ON `rent` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;
+
+Delete
+
+CREATE TRIGGER `delete_rent` AFTER DELETE ON `rent` 
+FOR EACH ROW UPDATE total SET Amount=((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = Old.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = Old.User_id) )WHERE total.ID =Old.User_id;
+
+Update
+
+CREATE TRIGGER `update_rent` AFTER UPDATE ON `rent` 
+FOR EACH ROW UPDATE total SET Amount =((SELECT COALESCE(SUM(Amount), 0)FROM rent WHERE rent.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM food WHERE food.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM bills WHERE bills.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM homeaccessary WHERE homeaccessary.User_id = NEW.User_id) + 
+(SELECT COALESCE(SUM(Amount), 0)FROM others WHERE others.User_id = NEW.User_id) ) WHERE total.ID = New.User_id;

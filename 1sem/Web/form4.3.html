@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration_Form</title>
+	<h2>New User Registration Form</h2>
+</head>
+<body>
+	<form>
+		<label>User Name:</label><input type="fname" name="fname" id="fnm" placeholder="Enter firstname" required><br><br>
+
+		<label>E-mail Address:</label><input type="email" name="email" id="em" placeholder="name@domain.com" 
+		pattern="^[A-Za-z0-9+_.-]+@[A-Za-z0-9+_.-]+$" required><br><br>
+
+		<label>Date of Birth:</label><input type="date" name="DOB"><br><br>
+
+		<label>HTML Experience Years:</label>0<input type="range" name="points" min="0" max="100" required>100 years<br><br>
+
+		<label>Number of childern:</label><input type="number" name="no" id="no" placeholder="0" min="0" required><br><br>
+
+		<label>Personal Page URL:</label><input type="text" name="no1" pattern="http://+" placeholder="HTPP://domain.com" required>
+		<br><br>
+
+		<label>Registration renewal month:</label><input type="number" name="no2" min="1" required><br><br>
+
+		<input type="Submit" name="submit" value="Submit"><br><br>
+		<input type="button" name="Clear" value="Clear">
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validate</title>
+</head>
+<body>
+	<form>
+		First Name:<input type="text" name="fname" id="fn"/><br><br>
+		Middle Name:<input type="text" name="mname" id="mn"><br><br>
+		Last Name:<input type="text" name="lname" id="ln"><br><br>
+		Age:<input type="text" name="age" id="a" 
+			onfocus="onfocusevent()" onblur="validate()"/><br><br>
+		Weight:<input type="text" name="wig" id="w" 
+			 onfocus="onfocusevent1()" onblur="validate1()" /><br><br>
+		<input type="Submit" name="sub" >
+	</form>
+	<script type="text/javascript">
+		function onfocusevent()
+		{
+			let n=parseInt(document.getElementById("a").value);
+		}
+		function validate()
+		{
+			let n=parseInt(document.getElementById("a").value);
+			if(n<17)
+				alert("Age must be grater then 17");
+		}
+
+
+		function onfocusevent1()
+		{
+			let n1=parseInt(document.getElementById("w").value);
+		}
+		function validate1()
+		{
+			let n1=parseInt(document.getElementById("w").value);
+			if(n1<45 || n1>75)
+				alert("Weigth should be in range 45-75");
+		}
+
+	</script>
+</body>
+</html>

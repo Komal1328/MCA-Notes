@@ -1,0 +1,112 @@
+CREATE TABLE Employee_16(
+Fname varchar(20) NOT NULL,
+Minit varchar(10),
+Lname varchar(20),
+Ssn int NOT NULL,
+Bdate DATE NOT NULL,
+Address varchar(200),
+Sex varchar(10) NOT NULL,
+Salary int NOT NULL,
+Super_ssn int,
+Dno int,
+PRIMARY KEY(Ssn)
+);
+
+
+CREATE TABLE Department_16(
+Dname varchar(20) NOT NULL,
+Dnumber int,
+Mgr_ssn int NOT NULL,
+Mgr_start_date DATE NOT NULL,
+PRIMARY KEY(Dnumber),
+FOREIGN KEY(Mgr_ssn) REFERENCES Employee_16(Ssn));
+
+
+CREATE TABLE Dept_location_16(
+Dnumber int NOT NULL,
+Dlocation varchar(20) NOT NULL,
+FOREIGN KEY (Dnumber) REFERENCES Department_16(Dnumber),
+PRIMARY KEY (Dlocation)
+);
+
+CREATE TABLE Project_16(
+Pname varchar(20) NOT NULL,
+Pnumber int,
+Plocation varchar(20) NOT NULL,
+Dnum int,
+PRIMARY KEY(Pnumber),
+FOREIGN KEY(Dnum) REFERENCES Department_16(Dnumber)
+);
+
+
+CREATE TABLE Works_On_16(
+Essn int,
+Pno int,
+Hours float,
+FOREIGN KEY(Essn) REFERENCES Employee_16(Ssn),
+FOREIGN KEY(Pno) REFERENCES Project_16(Pnumber)
+);
+
+CREATE TABLE Dependent_16(
+Essn int,
+Dependent_name varchar(20),
+Sex varchar(10) NOT NULL,
+Bdate DATE NOT NULL,
+Relationship varchar(20),
+FOREIGN KEY(Essn) REFERENCES Employee_16(Ssn),
+PRIMARY KEY(Dependent_name)
+);
+
+
+ALTER TABLE Employee_16 ADD FOREIGN KEY(Super_ssn) REFERENCES Employee_16(Ssn);
+ALTER TABLE Employee_16 ADD FOREIGN KEY(Dno) REFERENCES Department_16(Dnumber);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Employee_16 values('John','B','Smith',123456789,TO_DATE('1965-01-09', 'YYYY-MM-DD'),'731 Fondren, Houseton,TX','M',30000,333445555,5);
+INSERT INTO Employee_16 values('Franklin','T','Wong',333445555,TO_DATE('1955-12-08', 'YYYY-MM-DD') ,'638 Voss Houston TX','M',40000,888665555,NULL);
+INSERT INTO Employee_16 values('Alicia','J','Zelaya',999887777,TO_DATE('1968-01-19', 'YYYY-MM-DD') ,'3321 Castle Spring TX','M',25000,987654321,4);
+INSERT INTO Employee_16 values('Jennifer','S','Wallace',987654321,TO_DATE('1941-06-20', 'YYYY-MM-DD') ,'291 Berry Bellaire TX','F',43000,888665555,NULL);
+INSERT INTO Employee_16 values('Ramesh','K','Narayan',66684444,TO_DATE('1962-09-15', 'YYYY-MM-DD') ,'975 Fire Oak Humble TX','M',38000,333445555,5);
+INSERT INTO Employee_16 values('Joyce','A','English',453453453,TO_DATE('1972-07-31', 'YYYY-MM-DD') ,'5631 Rice Houston TX','F',25000,333445555,5);
+INSERT INTO Employee_16 values('Ahmad','V','Jabbar',987987987,TO_DATE('1969-03-29', 'YYYY-MM-DD') ,'980 Dallas Houston TX','F',25000,987654321,4);
+INSERT INTO Employee_16 values('James','E','Borg',888665555,TO_DATE('1937-11-10', 'YYYY-MM-DD') ,'450 Stone Houseton TX','M',55000,NULL,NULL);
+
+
+UPDATE Employee_16 SET Dno=1 WHERE Ssn=888665555;
+UPDATE Employee_16 SET Dno=5 WHERE Ssn=333445555;
+UPDATE Employee_16 SET Dno=4 WHERE Ssn=987654321;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Department_16 values('Research',5,333445555,TO_DATE('1988-05-22', 'YYYY-MM-DD'));
+INSERT INTO Department_16 values('Administration',4,987654321,TO_DATE('1995-01-01', 'YYYY-MM-DD'));
+INSERT INTO Department_16 values('Headquarters',1,888665555,TO_DATE('1981-06-19', 'YYYY-MM-DD'));
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Dept_location_16 values(1,'Houston');
+INSERT INTO Dept_location_16 values(4,'Stafford');
+INSERT INTO Dept_location_16 values(5,'Bellaire');
+INSERT INTO Dept_location_16 values(5,'Sugarland');
+INSERT INTO Dept_location_16 values(5,'Houston');
+
+ALTER TABLE Dept_location_16 DROP PRIMARY KEY;
+ALTER TABLE Dept_location_16 ADD PRIMARY KEY (Dlocation, Dnumber);
+----------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Project_16 values('ProductX',1,'Bellaire',5);
+INSERT INTO Project_16 values('ProductY',2,'Sugarland',5);
+INSERT INTO Project_16 values('ProductZ',3,'Houston',5);
+INSERT INTO Project_16 values('Computerization',10,'Stafford',4);
+INSERT INTO Project_16 values('Reorganization',20,'Houston',1);
+INSERT INTO Project_16 values('Computerization',30,'Stafford',4);
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Dependent_16 values(333445555,'Alice','F',TO_DATE('1986-04-05', 'YYYY-MM-DD'),'Daughter');
+INSERT INTO Dependent_16 values(333445555,'Theodore','M',TO_DATE('1983-10-25', 'YYYY-MM-DD'),'Son');
+INSERT INTO Dependent_16 values(333445555,'Joy','F',TO_DATE('1958-05-03', 'YYYY-MM-DD'),'Spouse');
+
+DELETE from Employee_16 WHERE Ssn=123456789;
+
+

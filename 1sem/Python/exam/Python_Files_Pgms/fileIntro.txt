@@ -1,0 +1,11 @@
+A file is simply a sequence of characters stored on your computer or network. 
+One of the things that makes a file different from a string or list of characters is that the file exists even after a program ends. 
+This makes a file useful for maintaining information that must be remembered for a long period of time.
+Within a Python program a file is represented by a value of type file. 
+This value does not actually hold the contents of the file, rather the value is a portal through which the user can access the contents of the file. 
+A file stored on disk might easily contain more characters then can be held by a variable in memory.
+A file value is used in three distinct steps. First, the file is opened. 
+This establishes the link between the file value in the Python program and the information stored on the disk.
+Next, values are read or written to the file. 
+The process involves bringing characters in from the disk and storing them in a string in the Python program, or alternatively taking the contents of a string in your program and writing them out to the disk. 
+When all values have been either read or written, the last step is to close the file.

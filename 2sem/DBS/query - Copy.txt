@@ -1,0 +1,3 @@
+SELECT SUM(Amount) From others;
+SELECT SUM(o.Amount),SUM(f.Amount) FROM others o, food f;
+SELECT SUM(r.Amount) as ramt,SUM(f.Amount) as fAmount  From rent r , food f ;

@@ -1,0 +1,107 @@
+1.Bnak
+
+import java.util.*;
+class Bank_account
+{
+	double bal=0;
+	void deposite(double amt)
+	{
+		bal=bal+amt;
+		System.out.println("Balance amount: "+bal);
+	}
+	void withdraw(double amount)
+	{
+		bal=bal-amount;
+		System.out.println("Balance amount in bank_account: "+bal);
+	}
+}
+class saving extends Bank_account
+{
+	void withdraw(double amount)
+	{
+		System.out.println("Balance amount in savings account: "+bal);
+		if(bal>100)
+		{
+			bal=bal-amount;
+			System.out.println("Balance amount in savings account: "+bal);	
+		}
+		else
+		{
+			System.out.println("Insuffient balance in savings account: "+bal);
+		}
+	}
+}
+class current extends Bank_account
+{
+	void withdraw(double amount)
+	{
+		bal=bal-amount;
+		System.out.println("Balance amount in current account: "+bal);	
+	}
+}
+class bank
+{	
+	public static void main(String args[])
+	{
+		saving s=new saving();
+		current c=new current();
+		s.deposite(5000);
+		s.withdraw(4900);
+		c.deposite(4000);
+		c.withdraw(3500);
+		s.withdraw(100);
+		c.withdraw(500);
+	}
+}
+
+***********************************************************************************************************
+
+2.User exception
+
+import java.util.*;
+class MyException extends Exception
+{
+	int i,j,n;
+	Scanner sc= new Scanner(System.in);
+	int a[]=new int[200];
+	void input()
+	{
+		try
+		{
+			System.out.println("Enter the value of n");
+			n=sc.nextInt();
+			System.out.println("Enter "+n+" elements");
+			for(i=0;i<n;i++)
+			{
+				a[i]=sc.nextInt();
+				for(j=0;j<i;j++)
+				{
+					if(a[i]==a[j])
+					throw new MyException();
+				}
+			}
+		}
+		catch(MyException e)
+		{
+			System.out.println("Caught exception");
+			System.out.println("Entered duplicate value");
+		}
+	}
+}
+class excpDemo
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			MyException m=new MyException();
+			m.input();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e);
+		}
+	}
+}
+
+	

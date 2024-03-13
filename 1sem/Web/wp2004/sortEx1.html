@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sort</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let num=[40,100,1,5,25,10];
+		arr=num.sort();
+		document.write("sorted array "+arr+"<br>")
+		aec=num.sort(function(a,b){return a-b});
+		document.write("Sorte array in ascending order "+aec+"<br>");
+		dec=num.sort(function comp(a,b){return b-a});
+		document.write("Sorte array in descending order "+dec+"<br>");
+	</script>
+</body>
+</html>

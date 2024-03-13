@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const arr1= [];
+		while(true)
+		{
+			const name=prompt("Enter name");
+			if(name === null)
+			{
+				break;
+			}
+			arr1.push(name);
+		}
+		arr2=arr1.sort();
+		for(i=0;i<arr2.length;i++)
+		{
+			document.write(arr2[i]+"<br>");
+		}
+	</script>
+</body>
+</html>

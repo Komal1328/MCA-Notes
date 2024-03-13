@@ -1,0 +1,179 @@
+1.a)//fun.js
+import React from 'react';
+function FunctionalComponent(prop)
+{
+    return(
+        <><h1>Student Name:{prop.name}  USN:{prop.usn}  Department:{prop.dept}  Age:{prop.age}</h1></>
+    );
+}
+export default FunctionalComponent;
+
+//app.js
+import './App.css';
+import FunctionComponent from './fun.js';
+function App() {
+  return (
+    <div className="App" style={{color:"blue",backgroundColor:"cyan"}}>
+      <FunctionComponent
+      name='Yamuna' usn='1MS22MC057' dept='MCA' age='21'>
+      </FunctionComponent>
+    </div>
+  );
+}
+
+export default App;
+
+
+1.b)//App.js
+import './App.css';
+import React from 'react';
+//import ReactDOM from 'react-dom';
+//import FunctionComponent from './fun.js';
+class App extends React.Component{
+  render(){
+    const User=[
+      {id:'1MS22MC070',
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9876543210'
+    },
+    {id:'1MS22MC071',
+    name:'Sita',
+    email:'sita@gmail.com',
+    phno:'9876543219'
+    }
+    ];
+    return(
+      <div>
+        <ol>
+          {User.map(data =>(
+            <li key={data.id}>{data.id}
+            <ul>
+              <li>{data.name}</li>
+              <li>{data.email}</li>
+              <li>{data.phno}</li>
+            </ul>
+            </li>
+          ))}
+        </ol>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+2.a)//App.js
+import './App.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+class App extends React.Component
+{
+  render()
+  {
+    return(
+      <div>
+        <h1>Welcome to MCAE11</h1>
+        <h2>Sample React.js props validation example</h2>
+        <table>
+          <tr>
+            <th>type</th>
+            <th>value</th>
+            <th>valid</th>
+          </tr>
+          <tr>
+            <td>Boolean</td>
+            <td>{this.props.propBool}</td>
+            <td>{(typeof(this.props.propBool)=='boolean') ? "true" : "false"}</td>
+          </tr>
+          <tr>
+            <td>String</td>
+            <td>{this.props.propString}</td>
+            <td>{(typeof(this.props.propString)=='string') ? "true" : "false"}</td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td>{this.props.propNumber}</td>
+            <td>{(typeof(this.props.propNumber)=='number') ? "true" : "false"}</td>
+          </tr>
+        </table>
+      </div>
+    );
+  }
+}
+//prop types for components
+App.propTypes = {
+  propBool: PropTypes.bool.isRequired,
+  propString: PropTypes.string,
+  propNumber: PropTypes.number,
+}
+
+//default props for component valid
+App.defaultProps = {
+  propBool: 12,
+  propString:1,
+  propNumber:"1GFD",
+}
+
+
+export default App;
+
+//default props for component valid
+App.defaultProps = {
+  propBool: true,
+  propString:"GFG",
+  propNumber:1,
+}
+
+
+export default App;
+
+2.b)//App.js
+import React from 'react';
+function App(){
+  const User = [
+    {id:1,
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9845613278'
+    },
+    {id:2,
+      name:'Sham',
+      email:'sham@gmail.com',
+      phno:'9891340848'
+    }
+  ];
+  const User1=[
+    {id:3,
+    name:'Sita',
+    email:'sita@gmail.com',
+    phno:'9876543210'
+  },
+  {id:4,
+    name:'Radha',
+    email:'radha@gmail.com',
+    phno:'7894561230'
+  }]
+  const joinList = [User, User1];
+  return (
+    <div>
+      <ul>
+        {joinList.map((nestedItem, i) => (
+        <ul key={i}>
+          <h3> List {i} </h3>
+          {nestedItem.map(data => (
+            <li key={data.id}>
+              <div>{data.id}</div>
+              <div>{data.name}</div>
+              <div>{data.email}</div>
+              <div>{data.phno}</div>
+            </li>
+          ))}
+        </ul>
+        ))}
+      </ul>
+    </div>
+  );
+}
+export default App;

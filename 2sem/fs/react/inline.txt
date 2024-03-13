@@ -1,0 +1,38 @@
+//inline css
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1 style={{color:"blue"}}>Inline CSS Demo</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+import logo from './logo.svg';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './App.css';
+
+class App extends React.Component{
+  render(){
+    const mystyle = {
+      color:"pink",
+      backgroundColor:"cyan",
+      padding:"10px",
+      fontFamily:"Arial"
+    };
+    return(
+      <div>
+        <h1 style={mystyle}>Welcome to MCA Department</h1>
+        <p>We are in React JS learnings</p>
+      </div>
+    );
+  }
+}
+
+export default App;

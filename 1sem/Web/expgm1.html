@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arithmetic operations</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num1,num2;
+			num1=prompt("Enter first number");
+			num2=prompt("Enter second number");
+			num1=parseFloat(num1);
+			num2=parseFloat(num2);
+		function add() 
+		{
+			alert(num1+num2);
+		}
+		function sub() 
+		{
+			alert(num1-num2);
+		}
+		function mul() 
+		{
+			alert(num1*num2);
+		}
+		function div() 
+		{
+			alert(num1/num2);
+		}
+		function mod() 
+		{
+			alert(num1%num2);
+		}
+	</script>
+	<label>Number 1:</label>
+	<input type="number" name="no1" id="no1"><br><br>
+	<label>Number 2:</label>
+	<input type="number" name="no2" id="no2"><br>
+	<input type="button" name="button" onclick="add()" value="ADD"/>
+	<input type="button" name="button" onclick="sub()" value="SUB"/>
+	<input type="button" name="button" onclick="mul()" value="MUL"/>
+	<input type="button" name="button" onclick="div()" value="DIV"/>
+	<input type="button" name="button" onclick="mod()" value="MOD"/>
+</body>
+</html>

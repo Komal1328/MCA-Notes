@@ -1,0 +1,29 @@
+public class NumberSearcher<T extends Number> {
+    private T[] numbers;
+
+    public NumberSearcher(T[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public boolean contains(T target) {
+        for (T number : numbers) {
+            if (number.equals(target)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        NumberSearcher<Number> searcher = new NumberSearcher<>(new Number[]{1, 2.5, 3, 4.5, 5.0});
+
+        int targetInt = 3;
+        double targetDouble = 4.5;
+        float targetFloat = 2.5f;
+
+        System.out.println("Array contains " + targetInt + ": " + searcher.contains(targetInt));
+        System.out.println("Array contains " + targetDouble + ": " + searcher.contains(targetDouble));
+        System.out.println("Array contains " + targetFloat + ": " + searcher.contains(targetFloat));
+        System.out.println("Array contains 6: " + searcher.contains(6));
+    }
+}

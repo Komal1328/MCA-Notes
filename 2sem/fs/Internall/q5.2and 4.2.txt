@@ -1,0 +1,27 @@
+5b).Develop a React-JS Application to render list objects with
+keys. 
+
+
+import React from 'react';
+class App extends React.Component {
+  render(){
+    const Dept = [
+      {id:1, name: 'MCA'},
+      {id:2, name:'MBA'},
+      {id:3, name:'CSE'},
+      {id:4, name:'ISE'},
+      {id:5, name:'MECH'},
+      {id:6, name:'AERO'},
+      {id:7, name:'CIVIL'},
+      {id:8, name:'EEE'}
+    ];
+    return(
+      <ul>
+      {Dept.map(data => (
+        <li key={data.id}>{data.id} {data.name}</li>
+      ))}
+    </ul>
+    );
+  }
+}
+export default App;

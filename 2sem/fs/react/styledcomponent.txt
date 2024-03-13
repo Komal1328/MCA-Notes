@@ -1,0 +1,30 @@
+import logo from './logo.svg';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './App.css';
+import Button from './button'
+function App(){
+    return(
+      <div>
+        <h1>Welcome to MCA Department</h1>
+        <p>We are in React JS learnings</p>
+        <Button>Click Me</Button>
+      </div>
+    );
+}
+
+export default App;
+
+//button.js
+import styled from 'styled-components'
+
+const Button = styled.div`
+    width : 100px;
+    cursor : pointer;
+    text-decoration : none;
+    color : white;
+    background-color : purple;
+    margin : 0 auto;
+    font-size : 2 rem;
+`
+export default Button;

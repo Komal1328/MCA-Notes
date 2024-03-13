@@ -1,0 +1,14 @@
+Technologies used 
+
+React: The code is written using the React library, which is a popular JavaScript library for building user interfaces.
+
+Functinal components:These are simple Javascript function that returns HTML.Create new js file in src folder then we have to export the component to use this component.The functional component is also known as stateless component because we can mot use state directly in functinal components.Import the functinal component file in app.js.
+
+Forms : Forms are creted using functional component and the controlled components like useSate ,useEffects are used. 
+useState: The useState hook is used to manage the state of the data retrieved from the API. It initializes the state with an empty array.
+useEffect: The useEffect hook is used to perform side effects in the component.
+
+Bootstrap: Bootstrap utilizes Sass for a modular and customizable architecture. Import only the components you need, enable global options like gradients and shadows, and write your own CSS with our variables, maps, functions, and mixins.
+@import "../node_modules/bootstrap/scss/bootstrap"; to import the bootstrap.
+
+axios: Axios is a popular JavaScript library for making HTTP requests. It is used here to send HTTP requests to the API to retrieve data and perform deletions.

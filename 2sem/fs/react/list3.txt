@@ -1,0 +1,27 @@
+import React from 'react';
+function App(){
+  const User = [
+    {id:'01',
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9845613278'
+    },
+    {id:'02',
+      name:'Sham',
+      email:'sham@gmail.com',
+      phno:'9891340848'
+    }
+  ];
+  return (
+    <ul>
+      {User.map(data => (
+        <li key={data.id}> {data.id}
+          <p>{data.name}</p>
+          <p>{data.email}</p>
+          <p>{data.phno}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+export default App;

@@ -1,0 +1,40 @@
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        // Create a LinkedList of integers
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        // Add elements to the LinkedList
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+
+        // Display the elements in the LinkedList using an iterator
+        System.out.println("Elements in the LinkedList:");
+        Iterator<Integer> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        // Add an element at the beginning of the LinkedList
+        linkedList.addFirst(0);
+
+        // Add an element at the end of the LinkedList
+        linkedList.addLast(4);
+
+        // Display the modified LinkedList
+        System.out.println("Modified LinkedList:");
+        for (Integer num : linkedList) {
+            System.out.println(num);
+        }
+
+        // Remove an element from the LinkedList
+        linkedList.remove(2);
+
+        // Display the final LinkedList
+        System.out.println("Final LinkedList:");
+        linkedList.forEach(System.out::println);
+    }
+}

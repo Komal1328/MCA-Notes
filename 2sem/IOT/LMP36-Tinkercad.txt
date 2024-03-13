@@ -1,0 +1,39 @@
+// temperature sensor is connected to A0
+const int sensorPin = A0;
+
+// variable used to store the value coming from the sensor 
+int sensorVal = 0; 
+void setup() {
+ Serial.begin(9600); // initialize the serial communication
+}
+
+void loop() {
+ // read the value from the sensor
+ sensorVal = analogRead(sensorPin); 
+
+ // convert the sensor reading to voltage
+ float voltage = (sensorVal/1024.0) * 5.0; 
+
+ // convert the voltage to temperature in Celsius
+ float temperatureC = (voltage - .5) * 100; 
+ 
+ // convert the temperature in Celsius to Fahrenheit
+ float temperatureF = temperatureC * (9.0/5.0) + 32.0;
+
+// send the readings to the serial monitor  
+ Serial.print("Sensor Value: "); 
+
+ Serial.print(sensorVal);
+
+// send the voltage to the serial monitor
+ Serial.print(", Volts: "); 
+ Serial.print(voltage);
+// send the Celsius reading to the serial monitor
+ Serial.print(", degrees C: "); 
+ Serial.print(temperatureC);
+
+// send the Fahrenheit reading to the serial monitor
+ Serial.print(", degrees F: "); 
+ Serial.println(temperatureF);
+delay(1000);
+}

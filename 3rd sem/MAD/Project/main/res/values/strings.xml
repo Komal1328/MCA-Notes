@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Student-Budgtting-System</string>
+    <string name="don_t_have_account_sign_up">Don\'t Have account? Sign Up</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Your Details</legend>
+				<label>1.Name</label><input type="text" name="name"id="nm"placeholder="first and last name"><br>
+				<label>2.Email</label><input type="email" name="email"placeholder="emailid@gamil.com"><br>
+				<label>3.Phone</label><input type="number" name="no"placeholder="+914476787567">
+			</fieldset>
+			<fieldset>
+				<legend>Dilivery address</legend>
+				<label>1.Address</label><textarea name="address" rows="5"cols="20"></textarea><br>
+				<label>1.Post code</label><input type="number"name="pcode"pattern="[0-9]{6}"><br>
+				<label>Country</label><input type="text"name="cname"id="c_name">
+			</fieldset>
+			<fieldset>
+				<legend>Card Details</legend>
+				<label>1.
+					<fieldset>
+						<legend>Card type</legend>
+							<label>1.</label><input type="radio" name="c1">VISA<br>
+							<label>2.</label><input type="radio" name="c2">AMEX<br>
+							<label>3.</label><input type="radio" name="c3">MASTERCARD<br>
+					</fieldset></label>
+				<label>2.Card number</label><input type="number"name="no1"><br>
+				<label>3.Security code</label><input type="number" name="scode"><br>
+				<label>4.Name on card</label><input type="text" name="name"placeholder="Enter name as on card">
+			</fieldset>
+		</form>
+	</body>
+</html>

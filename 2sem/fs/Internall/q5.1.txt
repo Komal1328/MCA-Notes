@@ -1,0 +1,30 @@
+import React, { useRef } from 'react';
+import './App.css';
+export default function Uncontrolled(){
+  const inputRef = useRef(null);
+  const checkboxRef = useRef(null);
+
+
+function handleSubmit(){
+  alert(`Name: ${inputRef.current.value}`);
+  alert(`Checkbox: ${checkboxRef.current.value}`);
+}
+function onReset(){
+  window.location.reload(false);
+}
+  return(
+    <div className='app'>
+      <h1>Hi welcome to forms</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Name
+          <input type='text' name="name" ref={inputRef}/>
+        </label><br/>
+        <label>Do ypu like React?
+          <input type='checkbox' ref={checkboxRef} />
+        </label><br/>
+        <button type='submit' value="submit">Submit</button>
+        <button type='reset' value="Reset" onClick={onReset}>Reset</button>
+      </form>       
+    </div>
+  );
+}

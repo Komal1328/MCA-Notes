@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	First Name:<input type="name" name="fn" id><br><br>
+	Middle initial:<input type="mname" name="mn"><br><br>
+	Age:<input type="age" id="a"><br><br>
+	weight:<input type="weight" id="w">
+	<input type="button" value="click" onclick="validate()">
+	<script type="text/javascript">
+		function validate()
+		{
+			age=document.getElementById("a").value;
+			weight=document.getElementById("w").value;
+			if(age<17)
+				alert("Age should be greater then 17")
+			if(weight<45 || weight>75)
+				alert("weight should be within range 45-75")
+		}
+	</script>
+</body>
+</html>

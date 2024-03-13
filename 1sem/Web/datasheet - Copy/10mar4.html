@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prompt</title>
+	<script type="text/javascript">
+		var n;
+		n=parseInt(prompt("Enter a number"));
+		let f0=0;
+		let f1=1;
+		document.write("Fibonacci series:<br>"+f0+"<br>"+f1+"<br>");
+		let f;
+		for(let i=2;i<n;i++)
+		{
+			f=f0+f1;
+			document.write(f+"<br>");
+			f0=f1;
+			f1=f;
+		}
+		document.write("Square of numers<br>")
+		let res;
+		for(let i=1;i<=n;i++)
+		{
+			res=i*i;
+			document.write(i+"="+res+"<br>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

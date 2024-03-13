@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="rules.css"?>
+<books><heading>Welcome to GeeksforGeeks</heading>
+	<book>
+		<title>Title: Web Programming</title>
+		<author>Author: Chris</author>
+		<publisher>Publisher: Wiley</publisher>
+		<edition>Edition: 3</edition>
+		<price>Price: 300</price>
+	</book>
+	<book>
+		<title>Title: Internet world wide web</title>
+		<author>Author: Ditel</author>
+		<publisher>Publisher: Perason</publisher>
+		<edition>Edition: 3</edition>
+		<price>Price: 400</price>
+	</book>
+</books>

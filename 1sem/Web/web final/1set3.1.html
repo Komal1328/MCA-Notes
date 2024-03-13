@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form>
+		<h1>ISC Questionare</h1>
+		StudentName:<input type="text" name="name"><br><br>
+		Password:<input type="password" name="pwd" 
+		pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"><br><br>
+		Preffered cpurses:<br>
+		Networks<input type="checkbox" name="c1">Web<input type="checkbox" name="c2">
+		DS<input type="checkbox" name="c3">OS<input type="checkbox" name="c4"><br><br>
+		How many houres you study every day:<br>
+		1-3 houres<input type="radio" name="r1">4-5 houres<input type="radio" name="r2">
+		more then 6 houres<input type="radio" name="r3"><br><br>
+		Rate ISC Depatment<input list="rating" name="rating">
+		<datalist id="rating" value="Excellent">
+			<option>Excellent</option>
+			<option>Very Good</option>
+			<option>Good</option>
+			<option>Modrate</option>
+			<option>Bad</option>
+		</datalist><br><br>
+		Further Comments<br>
+		<textarea name="comments" rows="10" cols="100"></textarea><br><br>
+		<input type="submit" name="sub" value="submit form">
+		<input type="reset" name="res" value="reset">
+	</form>
+</body>
+</html>

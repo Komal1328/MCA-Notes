@@ -1,0 +1,36 @@
+import React from 'react';
+function App(){
+  const User = [
+    {id:1,
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9845613278'
+    },
+    {id:2,
+      name:'Sham',
+      email:'sham@gmail.com',
+      phno:'9891340848'
+    }
+  ];
+  const joinList = [User, User];
+  return (
+    <div>
+      <ul>
+        {joinList.map((nestedItem, i) => (
+        <ul key={i}>
+          <h3> List {i} </h3>
+          {nestedItem.map(data => (
+            <li key={data.id}>
+              <div>{data.id}</div>
+              <div>{data.name}</div>
+              <div>{data.email}</div>
+              <div>{data.phno}</div>
+            </li>
+          ))}
+        </ul>
+        ))}
+      </ul>
+    </div>
+  );
+}
+export default App;

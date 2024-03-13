@@ -1,0 +1,46 @@
+import java.util.LinkedList;
+
+public class StackUsingLinkedList {
+    private LinkedList<Integer> stack = new LinkedList<>();
+
+    public void push(int item) {
+        stack.addFirst(item); // Add the item to the beginning of the list
+    }
+
+    public int pop() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack.removeFirst(); // Remove and return the first item
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack.getFirst(); // Return the first item without removing it
+    }
+
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
+
+    public int size() {
+        return stack.size();
+    }
+
+    public static void main(String[] args) {
+        StackUsingLinkedList stack = new StackUsingLinkedList();
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        System.out.println("Top element: " + stack.peek());
+
+        System.out.println("Popping elements:");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+    }
+}

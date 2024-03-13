@@ -1,0 +1,48 @@
+Form1
+
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="Example">
+      <h1>Hi welcome to forms</h1>
+      <form className='example'>
+      <fieldset>
+        <label>Name</label>
+        <input type='text'></input>
+      </fieldset>
+      <button type='submit' value="submit">Submit</button>
+      </form>       
+    </div>
+  );
+}
+
+export default App;
+
+Form2
+
+import React from 'react';
+import './App.css';
+
+function App() {
+  const handleSubmit = event => {
+    event.preventDefault();
+    alert('You have submited from')
+  }
+  return (
+    <div className="Example">
+      <h1>Hi welcome to forms</h1>
+      <form onSubmit={handleSubmit}>
+      <fieldset>
+        <label>Name</label>
+        <input type='text'></input>
+      </fieldset>
+      <button type='submit' value="submit">Submit</button>
+      </form>       
+    </div>
+  );
+}
+
+export default App;
+

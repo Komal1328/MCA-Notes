@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/css' href='rules.css'?>
+<books>
+	<heading>Welcome To MCA</heading>
+	<book>
+		<title>Title:Web Programming</title>
+		<author>author:Chrisbates</author>
+		<publisher>Publisher:Wiley</publisher>
+		<edition>Edition:3</edition>
+		<price>Price:300</price>
+	</book>
+	<book>
+		<title>Title:Internet World wide web</title>
+		<author>Author:Ditel</author>
+		<publisher>Publishe:Person</publisher>
+		<edition>Edition:3</edition>
+		<price>Price:400</price>
+	</book>
+</books>

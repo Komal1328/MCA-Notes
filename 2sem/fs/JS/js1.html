@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Display date</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let res=new Date();
+            let day=res.getDay();
+            let currday="";
+            if(day==0){
+                currday="Sunday";
+            }
+            else if(day==1){
+                currday="Monday";
+            }
+            else if(day==2){
+                currday="Tuesday";
+            }
+            else if(day==3){
+                currday="Wednesday";
+            }
+            else if(day==4){
+                currday="Thursdday";
+            }
+            else if(day==5){
+                currday="Friday";
+            }
+            else if(day==6){
+                currday="Saturday";
+            }
+            document.write("Today is: "+currday+"<br>");
+            let a=res.getHours();
+            let b="";
+            if(a<12){
+                b="AM";
+            }
+            else if(a>=12){
+                b="PM";
+            }
+            document.write("Current Time is : "+a+" "+b+":"+res.getMinutes()+":"+res.getSeconds());
+        </script>
+    </body>
+</html>

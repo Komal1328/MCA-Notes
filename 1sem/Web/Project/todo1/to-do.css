@@ -1,0 +1,39 @@
+
+h1
+{
+	color: black;
+}
+.cont
+{
+	width: 350px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+	border-top: 5px  solid grey;
+	border-bottom: 5px solid grey;
+	background: lightgray;
+}
+#infield
+{
+	width: 200px;
+	height: 30px;
+	border: 1px solid black;
+	font-size: 30px;
+	color: darkgrey;
+}
+#add
+{
+	height: 35px;
+	width: 35px;
+	border: 1px solid black;
+	font-size: 30px;
+}
+#todocont:has(para:linethrough)
+{
+	order: 1;
+}
+.para-styling
+{
+	margin: 1px;
+	cursor: pointer;
+	font-size: 30px;
+	color: blue;
+}

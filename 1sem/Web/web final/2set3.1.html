@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flages</title>
+</head>
+<body>
+	<h1 id=demo>Country name</h1>
+	<img src="india.jpeg" width="400px" height="200px" onmouseover="india()">
+	<img src="usa.jpeg" width="400px" height="200px" onmouseover="usa()">
+	<img src="nepal.jpeg" width="400px" height="200px" onmouseover="nepal()"><br><br>
+	<!--Country:<input type="text" name="cname">!-->
+	<script type="text/javascript">
+		function india()
+		{
+			document.getElementById('demo').innerHTML="India";
+		}
+		function usa()
+		{
+			document.getElementById('demo').innerHTML="USA";
+		}
+		function nepal()
+		{
+			document.getElementById('demo').innerHTML="Nepal";
+		}
+	</script>
+</body>
+</html>

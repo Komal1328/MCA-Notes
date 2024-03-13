@@ -1,0 +1,21 @@
+import React from 'react';
+function App(){
+  const Dept = [
+    {name: 'MCA'},
+    {name:'MBA'},
+    {name:'CSE'},
+    {name:'ISE'},
+    {name:'MECH'},
+    {name:'AERO'},
+    {name:'CIVIL'},
+    {name:'EEE'}
+  ];
+  return (
+    <ul>
+      {Dept.map(data => (
+        <p>{data.name}</p>
+      ))}
+    </ul>
+  );
+}
+export default App;

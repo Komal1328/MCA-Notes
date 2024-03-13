@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		emp={id:102,name:"Shyam Kumar",salary:40000}
+		document.write(emp.id+" "+emp.name+" "+emp.salary+"<br>");
+	</script>
+	<script type="text/javascript">
+		var emp=new Object();
+		emp.id=101;
+		emp.name="Ravi Mlaik";
+		emp.salary=50000;
+		document.write(emp.id+" "+emp.name+" "+emp.salary+"<br>");
+	</script>
+	<script type="text/javascript">
+		// creating object using constructor
+		function emp(id,name,salary)
+		{
+			this.id=id;
+			this.name=name;
+			this.salary=salary;
+		}
+		e=new emp(103,"Vimal Jaiwal",30000);
+		document.write(e.id+" "+e.name+" "+e.salary+"<br>");
+	</script>
+</body>
+</html>

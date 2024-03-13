@@ -1,0 +1,19 @@
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+  
+class App extends React.Component {  
+  render() {  
+    return (  
+      <div>  
+      <h1 style={{color: "Blue"}}>Welcome to MCA Department!</h1>  
+      <p>Hi i am Pavan, studying in 2ns Sem MCA</p>  
+      </div>  
+    );  
+  }  
+}  
+export default App;  
+
+
+
+Note:
+<p style={{backgroundColor: "lightgreen"}}>-------output??

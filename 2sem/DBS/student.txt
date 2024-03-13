@@ -1,0 +1,63 @@
+CREATE TABLE student(
+ID int NOT NULL,
+Name varchar(20),
+Income varchar(20),
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE rent(
+ID int NOT NULL,
+Name varchar(20),
+Amount int,
+Date DATE NOT NULL,
+User_id int,
+PRIMARY KEY (ID),
+FOREIGN KEY(User_id) REFERENCES student(ID));
+
+CREATE TABLE homeaccessary(
+ID int,
+Item varchar(20),
+Amount int,
+Date DATE NOT NULL,
+User_id int NOT NULL,
+PRIMARY KEY (ID),
+FOREIGN KEY(User_id) REFERENCES student(ID)
+);
+
+CREATE TABLE food(
+ID int,
+Item varchar(20),
+Amount int,
+Date DATE NOT NULL,
+User_id int NOT NULL,
+PRIMARY KEY (ID),
+FOREIGN KEY(User_id) REFERENCES student(ID)
+);
+
+CREATE TABLE bills(
+ID int,
+Type varchar(20),
+Amount int,
+Date DATE NOT NULL,
+User_id int NOT NULL,
+PRIMARY KEY (ID),
+FOREIGN KEY(User_id) REFERENCES student(ID)
+);
+
+CREATE TABLE others(
+ID int,
+Item varchar(20),
+Amount int,
+Date DATE NOT NULL,
+User_id int NOT NULL,
+PRIMARY KEY (ID),
+FOREIGN KEY(User_id) REFERENCES student(ID)
+);
+
+CREATE TABLE Total(
+ID int NOT NULL,
+Name varchar(20),
+Amount int,
+FOREIGN KEY(ID) REFERENCES student(ID)
+);
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Replace()</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let txt="Please visit Microsoft and Microsoft";
+		let newtxt=txt.replace("Microsoft","MSRIT");
+		document.write(txt+"<br>");
+		document.write(newtxt+"<br>");
+		
+		let newtxt1=txt.replace("MICROSOFT","W3School");
+		document.write(newtxt1+"<br>");
+		
+
+		let txt2="Please visit Microsoft";
+		let newtxt2=txt2.replace("/MICROSOFT/i","W3School");
+		document.write(newtxt2+"<br>");
+
+		let newtxt3=txt.replace(/Microsoft/g,"W3School");
+		document.write(newtxt3+"<br>");
+
+		let newtxt4=txt.replaceAll("Microsoft","W3School");
+		document.write(newtxt4+"<br>");
+
+	</script>
+</body>
+</html>

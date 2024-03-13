@@ -1,0 +1,48 @@
+6...Implementation
+
+Below figure shows the basic layout of a road traffic management system. The four-lane intersection
+junction is taken, traffic lights, and Ultrasonic sensors are placed on the four sides.
+
+The system is designed and simulated using Arduino IDE and Arduino Mega as the controller. The ultrasonic sensors
+of four directions are connected to (11,10),(7,6),(9,8),(3,2) pins of Arduino.And 4 traffic lights are connected to (23,25,27),(29,31,33),(35,37,39) and (41,43,45) pins of Arduino. The RFID RC522 is connected to (5,53) pins of Arduino. And one LED connected to pin 49 of Arduino.
+
+Normal cycle:
+
+There are RED, YELLOW, and GREEN LED’s. For each of the colour, a mask pattern is present.
+Every time, Arduino takes traffic data as input, it decides which road should get which colour.Initially the 1st lane will have GREEN LED High and for all other lanes it will be having RED LED High.After delay of 15 seconds the YELLOW LED of 2nd lane will be High and other all lane's RED LED will be High after delay of 5 seconds GREEN LED of 2nd lane will be High for 15 seconds.After 15 seconds the same cycle continues for 3rd lane then 4th lane and again for the 1st lane and so on.
+
+Density based Traffic Management with Dynamic green signal timing 
+
+The ultrasonic sensors are kept at some distance from the junction which collects the data and are used to detect the density of the traffic in a particular lane.. If traffic extends up to that point, that road is considered as a high traffic zone, otherwise it is considered as a low traffic zone. If any data comes from Ultrasonic sensor of any road, it means traffic is more on that road. So, green signal is given to the road having high density rather than following the normal sequence as before.
+
+While running a normal cycle if there are more vehicles in any lane then the lane opposite to lane with more vehicles Green light will be High in order to control congestion.Consider a senior if the GREEN LED for 4th lane is High and there is more traffic density on the 1st lane. According to the normal cycle the 1st lane GREEN signal will be on but now due to hing density on lane 1, the GREEN LED of 4th lane will be HIGH so that congestion on lane one will be cleared and then the normal cycle will work as before.
+
+Emergency Vehicle Detection 
+
+The RFID tags are used to detect emergency vehicles like ambulance.When there is an Ambulance in lane, immediately the Green signal for Ambulance will be given so that Ambulance can be moved without interruption so patients can be reached to hospital as soon as possible. When there is Ambulance in lane 1 and Yellow signal for lane 2 is High and after 5 sec delay the Green signal for lane 2 has to be high but due to detection of ambulance on lane 1 the green signal for lane 3 will be high and for all other lane's red signal will be High. When the ambulance moves the normal cycle will continue, in this case 2 lane's green signal will be high.
+
+7...Result
+
+The smart traffic management system will give output on the basis of density of the traffic lanes so there will be particular time
+assigned to the lanes for the passing of vehicles so it will lower down the traffic congestion and also in the case
+of emergency there will be option for that to continue the traffic in normal way.And whenever it detects emergency vehicle, it provide green signal for perticular lane and other all lane will become red so that emergency vehicle can move without any interruption.
+
+The system helps in better time based monitoring and thus has certain advantages over the existing
+system like minimizing number of accidents, reducing fuel cost and is remotely controllable etc.
+The system will be designed in such a way that it will able to control the traffic congestion. And it can also be maintained very easily.
+
+
+8..Conclusion
+
+Smart Traffic Management System has been developed by using multiple features of hardware components in IoT. Traffic optimization is achieved using IoT platform for
+efficient utilizing allocating varying time to all traffic signal according to available vehicles count in road path. Smart Traffic Management System is implemented to
+deal efficiently with problem of congestion.
+
+This project presents an effective solution for rapid growth of traffic flow particularly in big cities which is increasing day by day and traditional systems have
+some limitations as they fail to manage current traffic effectively. Keeping in view the state of the art approach for traffic management systems, a smart traffic management system is proposed to control road traffic situations more efficiently and effectively. It changes the signal timing intelligently according to traffic density on the particular roadside and regulates traffic flow.This project also makes sure that emergency vehicle like ambulance will not suffer from any interruption due to traffic signal so that ambulance can reach hospital as soon as possible.
+
+Feature scope
+
+For this system we can implement the features which help the Ambulance driver to find the nearest hospital in case of emergency. Also we can provide information about the availability of doctors and send the alert to doctors about the patient so that they can prepare accordingly. By implementing camera module we can detect the normal cars which
+are under emergency. And also detect VIP vehicles so that they can move with zero traffic.
+

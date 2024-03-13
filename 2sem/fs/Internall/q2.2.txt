@@ -1,0 +1,47 @@
+import React from 'react';
+function FunctionalComponent(){
+  const User = [
+    {id:1,
+      name:'Ram',
+      email:'ram@gmail.com',
+      phno:'9845613278'
+    },
+    {id:2,
+      name:'Sham',
+      email:'sham@gmail.com',
+      phno:'9891340848'
+    }
+  ];
+  const User1=[
+    {id:3,
+    name:'Sita',
+    email:'sita@gmail.com',
+    phno:'9876543210'
+  },
+  {id:4,
+    name:'Radha',
+    email:'radha@gmail.com',
+    phno:'7894561230'
+  }]
+  const joinList = [User, User1];
+  return (
+    <div>
+      <ul>
+        {joinList.map((nestedItem, i) => (
+        <ul key={i}>
+          <h3> List {i} </h3>
+          {nestedItem.map(data => (
+            <li key={data.id}>
+              <div>{data.id}</div>
+              <div>{data.name}</div>
+              <div>{data.email}</div>
+              <div>{data.phno}</div>
+            </li>
+          ))}
+        </ul>
+        ))}
+      </ul>
+    </div>
+  );
+}
+export default FunctionalComponent;

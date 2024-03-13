@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student_Form</title>
+	<h2>Student Form</h2>
+</head>
+<body>
+	<form>
+		<label>Name:</label><input type="name" name="fname" id="fnm" placeholder="Enter name" pattern="^[A-Za-z]$"><br><br>
+		<label>Email:</label><input type="email" name="email" id="em" placeholder="pleace enter vaild email address"
+		pattern="^[A-Za-z0-9+_.-]+@[A-Za-z0-9+_.-]+$"><br><br>
+		<label>Phone:</label><input type="phone" name="pho" id="pno" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder="000-111-1234 format"><br><br>
+		<label>Semester:</label><input type="semester" name="sem" id="sem" pattern="^[1-8]{1}$" placeholder="Enter semester number"><br><br>
+		<label>Branch:</label><input list="browsers" name="datalist" id="dl" placeholder="Branch name">
+		<datalist id="browsers">
+				<option value="MCA">MCA</option>
+				<option value="M-Tech">M-Tech</option>	
+				<option value="MBA">MBA</option>	
+		</datalist><br><br>
+		<label>Websit</label><input type="text" name="website" id="website" pattern="http://+" placeholder="Enter URL"><br><br>
+		<input type="Submit" name="submit" value="submit">
+	</form>
+</body>
+</html>

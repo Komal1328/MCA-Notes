@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tags</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function counth2()
+		{
+			var nh2=document.getElementsByTagName("h2");
+			alert("Total number of h2 tags: "+nh2.length);
+		}
+		function counth3()
+		{
+			var nh3=document.getElementsByTagName('h3');
+			alert("Total number of h3s tags: "+nh3.length);
+		}
+	</script>
+	<form>
+		<h2 style="color: red;">This document is for</h2>
+		<h2 style="color: red;">Counting number of h2 tags in document</h2>
+		<h3>Using getElementsByTag</h3>
+		<h3>Counting number of h3 tags in documnet</h3>
+		<h2 style="color:red;">by using getElementByTag</h2>
+		<h3>All red color headings are h2</h3>
+		<input type="button" name="button" onclick="counth2()" value="h2 tags">
+		<input type="button" name="button" onclick="counth3()" value="h3 tags">
+	</form>
+</body>
+</html>

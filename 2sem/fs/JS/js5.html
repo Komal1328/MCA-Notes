@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>String Conversion</title>
+    </head>
+    <body>
+        <script>
+            strg=prompt("Enter a string");
+            document.write("original string: "+strg+"<br>");
+            arr1=new Array();
+            arr1=strg.split(" ");
+            for(let i=0;i<arr1.length;i++)
+            {
+                arr1[i]=arr1[i].charAt(0).toUpperCase()+arr1[i].slice(1);
+            }
+            document.write(arr1.join(" "));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Login</legend>
+			UserName:<input type="text" name="uname" required><br><br>
+			<label>Password</label>
+			<input type="Password" name="pwd" 
+			pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*()_-+={}[].,~]).{8,32}$" required>
+		</fieldset>
+		First Name:<input type="text" name="fname" required><br><br>
+		Last Name:<input type="text" name="lname" required><br><br>
+		Password:<input type="Password" name="pwd" 
+			pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#%^&*()_+-=~{}[]).{8,32}$" 
+			required><br><br>
+		Phone Number:<input type="text" name="no" required pattern="[0-9]{10,}"><br><br>
+		Email Id:<input type="email" name="email" pattern="(a-zA-Z0-9)+@(a-zA-Z0-9)+.[a-z]{2,}$"><br><br>
+		Select Country:<select name="country">
+			<option value="India">India</option>
+			<option value="usa">USA</option>
+			<option value="ussr">USSR</option>
+		</select><br><br>
+		Select Gender:<input type="radio" name="male">male<br><br>
+		<input type="radio" name="female">Female<br>
+		<input type="radio" name="others">Others<br><br>
+		Select:
+		<input type="checkbox" name="c1">I have a bike<br><br>
+		<input type="checkbox" name="c2">I have a car<br><br>
+		Data List:<input list="Language">
+		<datalist id="Language">
+			<option>html</option>
+			<option>Java</option>
+		</datalist><br><br>
+		<input type="file" name="img">
+		<input type="submit" name="submit">
+	</form>
+</body>
+</html>

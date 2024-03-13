@@ -1,0 +1,5 @@
+SELECT s.ID, s.Name , s.startamount, t.Amount from student s, total t WHERE s.ID=t.ID;
+
+
+
+SELECT s.ID, s.Name , s.startamount, t.Amount,(s.startAmount-t.Amount) as saveamt  from student s, total t WHERE s.ID=t.ID;

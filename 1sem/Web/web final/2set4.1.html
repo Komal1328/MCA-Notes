@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		n=prompt("Enter value of number");
+		document.write("number want to enter: "+n+"<br>");
+		let total=0;
+		function avrage() {
+		for(i=1;i<=n;i++)
+		{
+			a=parseInt(prompt("Enter number"));
+			total=total+a;
+		}
+		avg=total/n;
+		document.write("average of numbers: "+avg);
+		}
+	</script>
+	<input type="button" name="avg" value="average" onclick="avrage()">
+</body>
+</html>
