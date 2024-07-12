@@ -1,0 +1,80 @@
+1
+
+This paper presents a deep learning framework using convolutional neural networks (CNN) for multi-class object recognition. The researchers applied deep learning to multi-class object recognition and explored the convolutional neural network (CNN). The CNN was created with normalized standard initialization and trained with sample images from nine different object categories and sample test images using a widely varied dataset. All results were implemented in the Python tensorflow framework.
+
+The researchers examined and compared CNN results with final feature vectors extracted from variant approaches of bag-of-visual words (BOW) based on linear L2-SVM classifier. Based on sufficient experiments, the CNN model's effectiveness and robustness were verified with a rate of 90.12% accuracy.
+
+Object recognition is a classic technique used to effectively recognize an object in an image. Technologies, particularly in computer vision, are expected to detect and recognize more complex tasks with the help of local features detection methods. Over the last decade, there has been a sustained increase in researchers from various disciplines, including academia, industry, security agencies, and the general public, who have caught attention to exploring the covered aspects of object detection and recognition problems.
+
+Previously, Deep Neural Networks (DNNs) have been applied to various nature of problems and get very effective outcomes. Specifically, the Convolutional Neural Networks (CNN) model provides good results to handle related problems with natural language processing, computer vision, image segmentation, and classification.
+
+In this paper, the authors propose a multi-class object recognition task considering DNNs approach. The recognition model is based on the popular framework tensorflow, and the image data used for CNN is set to nine different object categories.
+
+2
+This review discusses the development of convolutional neural networks (CNNs) as a significant network in the deep learning field. CNNs have made impressive achievements in various areas, including computer vision and natural language processing, attracting attention from both industry and academia. Existing reviews mainly focus on CNN's applications in different scenarios without considering CNN from a general perspective, and some novel ideas proposed recently are not covered.
+
+The review introduces the history of CNN, provides an overview of various convolutions, introduces classic and advanced CNN models, and provides experimental analysis to draw conclusions and provide rules of thumb for functions and hyperparameter selection. It also covers the applications of 1-D, 2-D, and multidimensional convolution.
+
+The emergence of CNNs cannot be separated from artificial neural networks (ANNs). McCulloch and Pitts proposed the first mathematical model of neurons, while Rosenblatt and Rumelhartet al. proposed a single-layer perceptron model by adding learning ability to the MP model. Waibelet al. proposed a time-delay neural network for speech recognition, which can be viewed as a 1-D CNN. Zhang proposed the first 2-D CNN, the shift-invariant ANN, and LeCunet al. constructed a CNN for handwritten zip code recognition.
+
+Various shallow neural networks were successively proposed, and the term "convolution" was first used in the original version of LeNet. The review concludes by discussing open issues and promising directions for future work in the field of CNNs.
+
+3
+This article discusses the use of Convolutional Neural Network (CNN) for image detection and recognition. Deep learning algorithms are designed to mimic the function of the human cerebral cortex, allowing them to train large datasets with millions of parameters. CNN models are built to evaluate their performance on image recognition and detection datasets. The algorithm is implemented on the MNIST and CIFAR-10 datasets, and its performance is evaluated.
+
+The accuracy of models on MNIST is 99.6%, while CIFAR-10 uses real-time data augmentation and dropout on CPU units to reduce overfitting. Handwritten digit recognition is an image classification and recognition problem with numerous applications in computer vision, including facial recognition, biometric systems, self-driving cars, emotion detection, image restoration, and robotics.
+
+In this paper, Convolutional neural networks models are implemented for image recognition on the MNIST dataset and object detection on the CIFAR-10 dataset. The model is trained on an only CPU unit, and real-time data augmentation is used on the CIFAR-10 dataset. Dropout is used to reduce overfitting on the datasets.
+
+Recent years have seen significant progress in building classifiers for image detection and recognition on various datasets using various machine learning algorithms. Deep learning, in particular, has shown improvement in accuracy on various datasets. Some of the works described include Nordidayu binti Abdul Hamid et al. [3], which evaluated the performance on MNIST datasets using three different classifiers: Support Vector Machines (SVM), KNN (K-nearest Neighbor), and CNN (convolutional neural networks).
+
+In conclusion, CNN models have shown promising performance in image recognition and detection on various datasets, with potential applications in various fields such as facial recognition, biometric systems, emotion detection, and image restoration.
+
+4
+This paper evaluates studies on object recognition using deep learning, beginning with a primer on deep learning and its principal methods, the convolutional neural network (CNN). The subject then shifts to a number of widely used generic object detection methods, as well as various improvements and practical strategies for improving detection generally. The topic of different common genealogical patterns for object recognition will next be covered, along with some tweaks and practical methods for enhancing detection.
+
+Object detection systems commonly employ machine learning or deep learning to provide accurate findings. However, creating a trustworthy system for tracking and identifying objects is challenging due to factors like different angles, lighting, unique item forms, and sizes. Artificial intelligence, machine learning, pattern recognition, and image processing are just a few of the vital techniques used in this field. There are several applications that might be made use of, including improved human-computer interaction, military-restricted area monitoring, warnings of dangerous chemicals being produced, and traffic accident prevention.
+
+The most often used features for object detection are HOG, SIFT, Hair, and other more conventional grayscale approaches. To provide the needed information, the features are first identified, and the data is then categorised using the SVM (support vector machine) or Ads boost techniques. Traditional feature extraction models are limited to simple properties like contour and texture, making it impossible for them to find numerous targets in challenging settings.
+
+In conclusion, the paper highlights the importance of deep learning in object detection, particularly for vehicle detection tasks. By evaluating studies on object recognition using deep learning, researchers can develop more powerful tools that can learn deeper, higher-level, and more semantic characteristics.
+
+5
+This paper discusses the development of image recognition technology, summarizing several classic traditional algorithms, and introducing the use of convolution neural network (CNN) for image recognition. The paper summarizes the application and development of CNN in various fields in recent years and proposes to recognize images by deep learning in complex or high-risk environments similar to substations.
+
+Image recognition has evolved from word recognition to digital image processing and recognition, as well as object recognition. Traditional methods include image acquisition, image preprocessing, feature extraction, and image recognition. In the 1990s, deep learning gradually emerged due to its strong learning ability and efficient feature expression ability. Image recognition technology has been widely used in transportation, communication, medical, and other fields.
+
+The paper mainly discusses the development of image recognition based on deep learning in recent years and how to use it. The convolution neural network of gate is used to recognize the target. Traditional image recognition is generally divided into two parts: image feature extraction and classification. The traditional method has two prominent shortcomings: first, it needs to rely on manual design and often relies on the knowledge accumulated by the prior, which is relatively blind. Second, the classifier structure is simple, and it may not be able to map the complex features to the final recognition results, which has certain limitations.
+
+Sift, a feature extraction algorithm, was proposed by David Lowe in 1999 and improved in 2004. It uses scale invariance and is essentially a local feature descriptor. Bay, H., Tuytelaars, T., and van Gool, L jointly proposed Surf in 2006. Similar to Sift, Surf must also consider how to determine the location of points of interest. The paper concludes that in the future, there is a need to improve and optimize the model, intelligent algorithm, and data set.
+
+6
+This paper discusses the development of image recognition technology, summarizing several classic traditional algorithms, and introducing the use of convolution neural network (CNN) for image recognition. The paper summarizes the application and development of CNN in various fields in recent years and proposes to recognize images by deep learning in complex or high-risk environments similar to substations.
+
+Image recognition has evolved from word recognition to digital image processing and recognition, as well as object recognition. Traditional methods include image acquisition, image preprocessing, feature extraction, and image recognition. In the 1990s, deep learning gradually emerged due to its strong learning ability and efficient feature expression ability. Image recognition technology has been widely used in transportation, communication, medical, and other fields.
+
+The paper mainly discusses the development of image recognition based on deep learning in recent years and how to use it. The convolution neural network of gate is used to recognize the target. Traditional image recognition is generally divided into two parts: image feature extraction and classification. The traditional method has two prominent shortcomings: first, it needs to rely on manual design and often relies on the knowledge accumulated by the prior, which is relatively blind. Second, the classifier structure is simple, and it may not be able to map the complex features to the final recognition results, which has certain limitations.
+
+Sift, a feature extraction algorithm, was proposed by David Lowe in 1999 and improved in 2004. It uses scale invariance and is essentially a local feature descriptor. Bay, H., Tuytelaars, T., and van Gool, L jointly proposed Surf in 2006. Similar to Sift, Surf must also consider how to determine the location of points of interest. The paper concludes that in the future, there is a need to improve and optimize the model, intelligent algorithm, and data set.
+
+7
+This paper discusses the use of Convolutional Neural Networks (CNN) for object detection in computer vision systems. The authors compare two state-of-the-art models for object detection: Single Shot Multi-Box Detector (SSD) with MobileNetV1 and a Faster Region-based Convolutional Neural Network (Faster-RCNN) with InceptionV2. The results show that one model is ideal for real-time applications due to its speed, while the other can be used for more accurate object detection.
+
+Object detection is crucial in computer vision systems, used for various applications such as video surveillance, medical imaging, and robot navigation. Algorithms like background subtraction, temporal differencing, optical flow, Kalman filtering, support vector machine, and contour matching are used for this task. The newest method used for object detection is convolutional neural networks (CNN). Breakthroughs in image classification began when Alex won the 2012 ImageNet competition using deep convolutional neural networks. They trained a deep CNN to classify 1.2 million high-resolution images in the contest, achieving more accurate predictions than previous state-of-the-art models.
+
+Recent approaches for object detection include low shot transfer detectors, region selection networks, gatting networks, visual target tracking, active learning, and artificial neural networks. The paper is organized into sections such as a brief introduction about convolutional neural networks, transfer learning, TensorFlow models, experiment setup and dataset information, and results discussion.
+
+The authors emphasize the importance of understanding the concept of transfer learning, the different TensorFlow models used for object detection, and the experiment set-up and dataset information. The results of this study provide valuable insights into the potential of convolutional neural networks in object detection and image classification.
+
+8
+Deep Learning, or Deep Neural Networks (ANN), is a powerful tool that has become popular in the literature for handling large amounts of data. CNNs, such as Convolutional Neural Networks (CNN), have been particularly effective in pattern recognition, particularly in image data processing, computer vision, and natural language processing.
+
+CNNs have multiple layers, including convolutional, non-linearity, pooling, and fully-connected layers. The convolutional and fully-connected layers have parameters, while pooling and non-linearity layers do not. CNNs have excellent performance in machine learning problems, especially in image data, such as largest image classification data set (Image Net), computer vision, and natural language processing (NLP).
+
+The most beneficial aspect of CNNs is reducing the number of parameters in ANN, which has led to larger models being approached to solve complex tasks not possible with classic ANNs. CNNs also aim to obtain abstract features when input propagates toward deeper layers, such as edge detection in image classification, simpler shapes in second layers, and higher-level features like faces in the next layers.
+
+To understand CNN, it is essential to understand its basic elements, such as convolution, which involves converting raw pixels into a shape. Convolution is a mathematical linear operation between matrixes called convolution, and it is used to reduce the number of parameters in ANNs.
+
+Input data can be an image, video, or experimental video. Convolution is used to extract abstract features from the input, such as edges in image classification. The network's efficiency is affected by the parameters that affect its efficiency.
+
+In conclusion, deep learning and convolutional neural networks have shown significant advancements in pattern recognition, computer vision, and image recognition.
